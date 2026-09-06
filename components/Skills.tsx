@@ -1,7 +1,7 @@
-const skills = [
+const skillCategories = [
   {
     title: "UI/UX Design",
-    score: 9, // Skala 9/10 (90%)
+    score: 9,
     skills: [
       "UI/UX Design",
       "Wireframing",
@@ -12,7 +12,7 @@ const skills = [
   },
   {
     title: "Frontend Development",
-    score: 8.5, // Skala 8.5/10 (85%)
+    score: 9,
     skills: [
       "HTML",
       "CSS",
@@ -24,17 +24,30 @@ const skills = [
   },
   {
     title: "Backend Development",
-    score: 7.5, // Skala 7.5/10 (75%)
+    score: 8,
     skills: ["Laravel", "PHP", "Node.js", "CodeIgniter 4"],
   },
   {
+    title: "API & Payment Integration",
+    score: 8,
+    skills: [
+      "RESTful API",
+      "GraphQL",
+      "API Gateway",
+      "Midtrans",
+      "Xendit",
+      "PayPal",
+      "Webhook",
+    ],
+  },
+  {
     title: "Mobile Development",
-    score: 7, // Skala 7/10 (70%)
+    score: 7,
     skills: ["Flutter", "Dart"],
   },
   {
     title: "Database & Data Analytics",
-    score: 8.5, // Skala 8.5/10 (85%)
+    score: 8.5,
     skills: [
       "SQL",
       "PostgreSQL",
@@ -46,7 +59,7 @@ const skills = [
   },
   {
     title: "Data & Machine Learning",
-    score: 9, // Skala 9/10 (90%)
+    score: 9,
     skills: [
       "Python",
       "Machine Learning",
@@ -60,6 +73,23 @@ const skills = [
   },
 ];
 
+const tools = [
+  "Visual Studio Code",
+  "Git & GitHub",
+  "Figma",
+  "Google Colab",
+  "Jupyter Notebook",
+  "Postman",
+  "Tableau",
+  "Power BI",
+  "Microsoft SSIS",
+  "Microsoft Excel",
+  "Microsoft Office",
+  "XAMPP",
+  "Dbeaver",
+  "Vercel",
+];
+
 export default function Skills() {
   return (
     <section id="skills" className="py-28 bg-white/[0.02]">
@@ -68,8 +98,9 @@ export default function Skills() {
 
         <h2 className="text-4xl md:text-5xl font-bold">My Tech Stack</h2>
 
+        {/* TECHNICAL SKILLS GRID */}
         <div className="grid md:grid-cols-2 gap-6 mt-16">
-          {skills.map((category) => (
+          {skillCategories.map((category) => (
             <div
               key={category.title}
               className="p-7 rounded-3xl border border-white/10 bg-zinc-900 flex flex-col justify-between"
@@ -91,7 +122,7 @@ export default function Skills() {
                   />
                 </div>
 
-                {/* DAFTAR SKILL / TOOLS */}
+                {/* DAFTAR SKILL */}
                 <div className="flex flex-wrap gap-2.5 mt-6">
                   {category.skills.map((skill) => (
                     <span
@@ -105,6 +136,28 @@ export default function Skills() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* BAGIAN TOOLS & SOFTWARE */}
+        <div className="mt-20 p-8 md:p-10 rounded-3xl border border-white/10 bg-zinc-900">
+          <h3 className="text-2xl font-bold text-white mb-2">
+            Tools & Software Ecosystem
+          </h3>
+          <p className="text-zinc-400 text-sm mb-8">
+            Daily productivity, development, and analytical tools I work with
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            {tools.map((tool) => (
+              <span
+                key={tool}
+                className="px-4 py-2 text-sm rounded-2xl bg-violet-500/5 text-zinc-300 border border-violet-500/15 hover:border-violet-500/40 hover:bg-violet-500/10 hover:text-white transition duration-200 flex items-center gap-2"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
+                {tool}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
