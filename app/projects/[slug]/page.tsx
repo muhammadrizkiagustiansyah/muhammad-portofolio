@@ -1,7 +1,7 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Layers } from "lucide-react";
 
 export default async function ProjectPage({
   params,
@@ -28,13 +28,13 @@ export default async function ProjectPage({
         </Link>
 
         <div className="mt-16">
-          <p className="text-violet-400">{project.role}</p>
+          <p className="text-violet-400 font-medium">{project.role}</p>
 
           <h1 className="text-5xl md:text-7xl font-bold mt-4">
             {project.title}
           </h1>
 
-          <p className="text-zinc-400 mt-6 text-lg max-w-3xl">
+          <p className="text-zinc-400 mt-6 text-lg max-w-3xl leading-relaxed">
             {project.description}
           </p>
 
@@ -42,7 +42,7 @@ export default async function ProjectPage({
             {project.tools.map((tool) => (
               <span
                 key={tool}
-                className="px-4 py-2 rounded-full bg-white/5 text-zinc-400"
+                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm"
               >
                 {tool}
               </span>
@@ -66,7 +66,9 @@ export default async function ProjectPage({
         {/* CASE STUDY */}
         <div className="grid md:grid-cols-2 gap-10 mt-24">
           <div>
-            <p className="text-violet-400 text-sm">OVERVIEW</p>
+            <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase">
+              OVERVIEW
+            </p>
 
             <h2 className="text-3xl font-bold mt-4">About The Project</h2>
 
@@ -76,19 +78,25 @@ export default async function ProjectPage({
           </div>
 
           <div>
-            <p className="text-violet-400 text-sm">MY ROLE</p>
+            <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase">
+              MY ROLE
+            </p>
 
             <h2 className="text-3xl font-bold mt-4">{project.role}</h2>
 
             <p className="text-zinc-400 mt-6">
-              Project Period: {project.period}
+              <span className="text-zinc-500">Project Period:</span>{" "}
+              {project.period}
             </p>
           </div>
         </div>
 
+        {/* PROBLEM & SOLUTION */}
         <div className="grid md:grid-cols-2 gap-10 mt-20">
           <div className="p-8 rounded-3xl bg-red-500/5 border border-red-500/10">
-            <p className="text-red-400 text-sm">THE PROBLEM</p>
+            <p className="text-red-400 text-sm font-semibold tracking-wider uppercase">
+              THE PROBLEM
+            </p>
 
             <p className="text-zinc-300 leading-relaxed mt-5">
               {project.problem}
@@ -96,7 +104,9 @@ export default async function ProjectPage({
           </div>
 
           <div className="p-8 rounded-3xl bg-violet-500/5 border border-violet-500/10">
-            <p className="text-violet-400 text-sm">THE SOLUTION</p>
+            <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase">
+              THE SOLUTION
+            </p>
 
             <p className="text-zinc-300 leading-relaxed mt-5">
               {project.solution}
@@ -104,9 +114,55 @@ export default async function ProjectPage({
           </div>
         </div>
 
+        {/* KEY FEATURES SECTION */}
+        {project.features && project.features.length > 0 && (
+          <div className="mt-24">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-2.5 rounded-xl bg-violet-500/10 text-violet-400 border border-violet-500/20">
+                <Layers className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-violet-400 text-xs font-semibold tracking-wider uppercase">
+                  SYSTEM CAPABILITIES
+                </p>
+                <h2 className="text-3xl font-bold mt-1">Key Features & Functionalities</h2>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {project.features.map((featureGroup, index) => (
+                <div
+                  key={index}
+                  className="p-8 rounded-3xl border border-white/10 bg-zinc-900/50 backdrop-blur-sm"
+                >
+                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10">
+                    <h3 className="text-xl font-bold text-violet-300">
+                      {featureGroup.role}
+                    </h3>
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-violet-500/10 text-violet-400 border border-violet-500/20">
+                      {featureGroup.items.length} Features
+                    </span>
+                  </div>
+
+                  <ul className="space-y-4">
+                    {featureGroup.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-zinc-300 text-sm leading-relaxed">
+                        <CheckCircle2 className="w-4 h-4 text-violet-400 mt-1 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* SCREENSHOTS */}
         <div className="mt-24">
-          <p className="text-violet-400 text-sm">FINAL DESIGN</p>
+          <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase">
+            FINAL DESIGN
+          </p>
 
           <h2 className="text-4xl font-bold mt-4">Project Screenshots</h2>
 
