@@ -15,44 +15,44 @@ export default function About() {
 
           <div>
             <p className="text-zinc-400 leading-relaxed text-lg">
-              Informatics Engineering graduate with a strong focus on Frontend Development, UI/UX Design, and Data Analytics. Experienced in building end-to-end responsive web and mobile applications through academic projects and an internship at Diskominfotik Kabupaten Bandung Barat. Proficient in Next.js, React, Tailwind CSS, Laravel, and Flutter, with specialized expertise in database management (SQL/PostgreSQL/BigQuery), payment gateway integration, and machine learning model implementation.
+              Informatics Engineering graduate specializing in Fullstack Development, UI/UX Design, and AI Integration. Experienced in architecting end-to-end web and mobile applications through academic projects and an internship at Diskominfotik Kabupaten Bandung Barat. Proficient in Next.js, Laravel, CodeIgniter 4, Flutter, and Tailwind CSS, with specialized expertise in REST API development, payment gateway integration, database management (MySQL/PostgreSQL), and AI-driven solutions including LLM API integration and route navigation models.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-10">
               <Card
                 icon="💻"
-                title="Frontend"
-                text="Responsive & Interactive Interfaces"
+                title="Fullstack Web"
+                text="Next.js, Laravel & CodeIgniter 4"
+              />
+
+              <Card
+                icon="📱"
+                title="Mobile Dev"
+                text="Cross-Platform Flutter Apps"
               />
 
               <Card
                 icon="🎨"
-                title="UI/UX"
+                title="UI/UX Design"
                 text="User-Centered Design & Prototyping"
+              />
+
+              <Card
+                icon="🤖"
+                title="AI & Automation"
+                text="Gemini API & Route Navigation Models"
               />
 
               <Card
                 icon="⚙️"
                 title="Backend & API"
-                text="REST API & Payment Integration"
+                text="REST API, MySQL & Payment Gateways"
               />
 
               <Card
                 icon="📊"
-                title="Data & SQL"
-                text="Database, Power BI & Analytics"
-              />
-
-              <Card
-                icon="📱"
-                title="Mobile"
-                text="Cross-Platform Flutter Apps"
-              />
-
-              <Card
-                icon="🤖"
-                title="Machine Learning"
-                text="Python & Recommendation Systems"
+                title="Data Analytics"
+                text="SQL, Power BI & Data Visualization"
               />
             </div>
           </div>

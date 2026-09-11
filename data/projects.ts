@@ -199,4 +199,5 @@ export const projects: Project[] = [
       { image: "/images/projects/washup/3.jpg", type: "mobile" },
     ],
   },
+  
 ];

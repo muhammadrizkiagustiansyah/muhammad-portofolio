@@ -21,18 +21,18 @@ export default function Hero() {
               <span className="text-zinc-500">Agustiansyah.</span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-violet-400 mt-8">
-              Software Engineer & Data Enthusiast
+            <h2 className="text-xl md:text-2xl text-violet-400 mt-8 font-medium">
+              Fullstack Developer & AI Solutions Enthusiast
             </h2>
 
             <p className="text-zinc-400 mt-6 max-w-xl leading-relaxed">
-              I specialize in building end-to-end web & mobile applications, integrating robust APIs and payment systems, as well as transforming data into actionable insights through analytics and machine learning.
+              I specialize in building end-to-end web & mobile applications, integrating AI capabilities like Gemini API & route optimization models, and delivering scalable fullstack solutions.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-10">
               <a
                 href="#projects"
-                className="px-6 py-3 rounded-full bg-violet-600 hover:bg-violet-500 transition flex items-center gap-2"
+                className="px-6 py-3 rounded-full bg-violet-600 hover:bg-violet-500 transition flex items-center gap-2 font-medium"
               >
                 View My Work
                 <ArrowDown size={18} />
@@ -41,7 +41,7 @@ export default function Hero() {
               <a
                 href="/cv/CV-Muhammad-Rizki-Agustiansyah.pdf"
                 download
-                className="px-6 py-3 rounded-full border border-white/15 hover:bg-white/5 transition flex items-center gap-2"
+                className="px-6 py-3 rounded-full border border-white/15 hover:bg-white/5 transition flex items-center gap-2 font-medium"
               >
                 Download CV
                 <Download size={18} />
