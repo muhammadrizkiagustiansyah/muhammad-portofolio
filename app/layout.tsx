@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Muhammad Rizki Agustiansyah | Portfolio",
   description:
-    "Frontend Developer & UI/UX Designer Portfolio of Muhammad Rizki Agustiansyah",
+    "Fullstack and Data Analytics Portfolio of Muhammad Rizki Agustiansyah",
 };
 
 export default function RootLayout({

@@ -27,14 +27,14 @@ export const projects: Project[] = [
   {
     slug: "nyamanin",
     title: "Nyaman.In",
-    role: "UI/UX Designer",
+    role: "UI/UX Designer & Fullstack Developer",
     period: "Sep 2024 — Jan 2025",
-    tools: ["Figma", "UI/UX Design", "User Flow", "Wireframing"],
+    tools: ["Figma", "Laravel", "PHP", "MySQL", "XAMPP", "UI/UX Design", "User Flow", "Wireframing"],
     logo: "/images/projects/nyamanin/logo.png",
     description:
       "A web-based boarding house search platform designed to provide students with a simple, intuitive, and user-friendly experience for discovering and exploring accommodation options.",
     overview:
-      "Nyaman.In is a UI/UX design project focused on creating a straightforward boarding house search experience for students. The project involved designing the overall user flow, interface layouts, and interactive experience using Figma.",
+      "Nyaman.In is a web project focused on creating a straightforward boarding house search experience for students. The project involved designing user flows and wireframes in Figma, backed by a robust Laravel and MySQL database architecture.",
     problem:
       "Finding a suitable boarding house can be challenging when accommodation information is scattered and difficult to compare. Students may need to go through multiple sources before finding a place that matches their needs.",
     solution:
@@ -70,12 +70,12 @@ export const projects: Project[] = [
     title: "TelkomEat",
     role: "Frontend Developer & Project Manager",
     period: "Sep 2025 — Jan 2026",
-    tools: ["Next.js", "Tailwind CSS", "JavaScript", "REST API"],
+    tools: ["Next.js", "Tailwind CSS", "Laravel", "PHP", "Node.js", "MySQL", "XAMPP", "REST API"],
     logo: "/images/projects/telkomeat/logo.jpeg",
     description:
       "A campus food ordering application designed to provide students with a responsive and interactive platform for browsing food options and placing orders conveniently.",
     overview:
-      "TelkomEat is a web-based food ordering platform developed for a campus environment using Next.js and Tailwind CSS.",
+      "TelkomEat is a web-based food ordering platform developed for a campus environment using Next.js, Tailwind CSS, and a Laravel backend running on a Node.js and XAMPP environment.",
     problem:
       "Students need a convenient way to discover available food options and place orders within the campus environment.",
     solution:
@@ -110,18 +110,18 @@ export const projects: Project[] = [
   {
     slug: "room-booking",
     title: "Meeting Room Booking Portal",
-    role: "Frontend Developer & UI/UX Designer",
+    role: "Fullstack Developer & UI/UX Designer",
     period: "Jul 2025 — Aug 2025",
-    tools: ["HTML", "CSS", "JavaScript", "Figma"],
+    tools: ["CodeIgniter 4", "PHP", "MySQL", "XAMPP", "JavaScript", "HTML/CSS", "Figma"],
     logo: "/images/projects/room-booking/logo.png",
     description:
-      "A meeting room booking portal developed for employees of Kabupaten Bandung Barat during an internship at Diskominfotik.",
+      "A fullstack web portal developed for Diskominfotik KBB to streamline meeting room reservations, scheduling, and facility management for government employees.",
     overview:
-      "A digital portal designed to simplify the process of finding, scheduling, and booking meeting rooms for employees.",
+      "Developed during an internship at Diskominfotik Kabupaten Bandung Barat, this web application simplifies meeting room availability tracking, scheduling, and user access control using a CodeIgniter 4 backend and MySQL database.",
     problem:
-      "The meeting room reservation process needed a more organized and accessible digital solution to check room availability efficiently.",
+      "The meeting room reservation process needed a centralized digital system to avoid schedule overlaps, manage room capacities, and monitor reservation logs efficiently.",
     solution:
-      "Designed the user interface in Figma and developed a responsive frontend using HTML, CSS, and JavaScript.",
+      "Designed UI/UX mockups in Figma and built a fullstack application using CodeIgniter 4 (PHP) and MySQL to deliver an intuitive reservation portal with real-time schedule checks and admin analytics.",
     features: [
       {
         role: "User (Pegawai)",
@@ -152,18 +152,18 @@ export const projects: Project[] = [
   {
     slug: "washup",
     title: "WashUp Laundry App",
-    role: "Frontend Developer & Project Manager",
+    role: "Fullstack Developer & Project Manager",
     period: "Feb 2025 — Jun 2025",
-    tools: ["Flutter", "Dart", "Payment Gateway", "Laravel API"],
+    tools: ["Flutter", "Dart", "Laravel API", "MySQL", "Gemini API", "AI Navigation Model", "Midtrans Payment"],
     logo: "/images/projects/washup/logo.jpeg",
     description:
-      "A mobile laundry service application developed to support digital laundry ordering, payment, order management, and delivery processes.",
+      "An end-to-end mobile laundry service ecosystem integrated with AI route navigation for couriers, Gemini API chatbot assistance, and automated payment gateways.",
     overview:
-      "WashUp is a mobile laundry service application that connects customers, administrators, and couriers through an integrated digital service flow.",
+      "WashUp is a multi-role mobile application connecting customers, administrators, and couriers. Built with Flutter for cross-platform mobile frontend and Laravel REST API for backend services, the application features an AI-powered delivery route optimization model and a Gemini-powered AI chatbot consultant.",
     problem:
-      "Manual laundry ordering makes it difficult to manage customer orders, payment confirmation, and delivery information efficiently.",
+      "Manual laundry operations suffer from inefficient courier dispatch routes, lack of real-time order tracking, and delayed customer support inquiries.",
     solution:
-      "Developed a mobile laundry service application with Flutter and Dart, supported by payment gateways and smart delivery logic.",
+      "Architected a complete mobile solution featuring automated payment processing, real-time status tracking, an AI routing algorithm for couriers to minimize pickup time, and an AI customer service assistant powered by Google Gemini API.",
     features: [
       {
         role: "User (Pelanggan)",
@@ -172,7 +172,7 @@ export const projects: Project[] = [
           "Pemesanan layanan laundry & kalkulasi kuantitas",
           "Integrasi Payment Gateway",
           "Real-time Tracking Status Pesanan (Penjemputan, Pencucian, Pengantaran)",
-          "AI Chatbot Assistant untuk konsultasi layanan",
+          "AI Chatbot Assistant (Integrasi Gemini API) untuk konsultasi layanan",
         ],
       },
       {
@@ -188,7 +188,7 @@ export const projects: Project[] = [
         role: "Kurir (Courier)",
         items: [
           "Authentication Kurir",
-          "Rute Navigasi AI ke lokasi pelanggan",
+          "Model AI Navigasi Rute optimal ke lokasi pelanggan",
           "Konfirmasi & pencatatan pembayaran tunai di tempat",
         ],
       },
